@@ -3,6 +3,15 @@ resource "aws_instance" "server1" {
   ami           = data.aws_ami.ami1.id
 
   tags ={
-    Name = "Charleston"
+    Name = "Devops"
+  }
+}
+
+resource "aws_instance" "server2" {
+  instance_type = var.instance-type
+  ami           = data.aws_ami.ami1.id
+
+  tags ={
+    Name = "Terraform-up"
   }
 }
